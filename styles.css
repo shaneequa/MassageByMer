@@ -1,0 +1,440 @@
+/* ==========================================================================
+   Massage by Mer — Stylesheet
+   Palette: earthy, warm, calming. Sage / clay / cream / soft walnut.
+   ========================================================================== */
+
+:root {
+  --color-cream:        #f7f2e9;
+  --color-cream-dark:   #efe6d6;
+  --color-sage:         #7c8a6e;
+  --color-sage-dark:    #5f6e52;
+  --color-clay:         #c17c56;
+  --color-clay-dark:    #a8603c;
+  --color-walnut:       #4a3c30;
+  --color-walnut-soft:  #6b5c4c;
+  --color-white:        #fffdf9;
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --max-width: 1100px;
+  --radius: 14px;
+  --shadow-soft: 0 10px 30px rgba(74, 60, 48, 0.08);
+}
+
+/* ---------- Reset & base ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-walnut);
+  background: var(--color-cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-walnut);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+h3 { font-size: 1.3rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.center { text-align: center; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-sage-dark);
+  margin-bottom: 0.6em;
+}
+
+.section-intro {
+  max-width: 640px;
+  margin: 0 auto 2.5em;
+  color: var(--color-walnut-soft);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-clay);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: var(--color-clay-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--color-sage);
+  color: var(--color-sage-dark);
+}
+
+.btn-secondary:hover {
+  background: var(--color-sage);
+  color: var(--color-white);
+}
+
+/* ---------- Fragrance banner (kept unmissable, above everything) ---------- */
+.fragrance-banner {
+  background: var(--color-clay-dark);
+  color: var(--color-white);
+}
+
+.fragrance-banner p {
+  margin: 0;
+  padding: 12px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+
+.fragrance-banner strong {
+  font-weight: 800;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 242, 233, 0.92);
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  gap: 24px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-sage-dark);
+  white-space: nowrap;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-walnut-soft);
+  transition: color 0.15s ease;
+}
+
+.main-nav a:hover { color: var(--color-clay-dark); }
+
+.header-cta {
+  padding: 10px 22px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124, 138, 110, 0.14), transparent 55%),
+    radial-gradient(circle at 85% 75%, rgba(193, 124, 86, 0.14), transparent 55%),
+    var(--color-cream);
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--color-walnut-soft);
+  margin-bottom: 1.8em;
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--color-walnut-soft);
+}
+
+/* ---------- Image placeholders (swap for real <img> tags later) ---------- */
+.image-placeholder {
+  background: var(--color-cream-dark);
+  border: 1.5px dashed var(--color-sage);
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--color-sage-dark);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.image-placeholder code {
+  background: var(--color-white);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.parking-image .image-placeholder {
+  aspect-ratio: 16 / 10;
+}
+
+/* ---------- Services ---------- */
+.services {
+  background: var(--color-white);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.service-card {
+  background: var(--color-cream);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid var(--color-cream-dark);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-2px);
+}
+
+.service-card.featured {
+  background: var(--color-sage);
+  border-color: var(--color-sage);
+}
+
+.service-card.featured h3,
+.service-card.featured .price {
+  color: var(--color-white);
+}
+
+.service-card.featured p {
+  color: rgba(255, 253, 249, 0.9);
+}
+
+.service-card.addon {
+  border-style: dashed;
+}
+
+.service-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.service-card-head h3 { margin: 0; }
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-clay-dark);
+  white-space: nowrap;
+}
+
+.service-card p {
+  color: var(--color-walnut-soft);
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+/* ---------- Policies ---------- */
+.policy-highlight {
+  background: var(--color-clay);
+  color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 40px;
+  box-shadow: var(--shadow-soft);
+}
+
+.policy-highlight h3 {
+  color: var(--color-white);
+  margin-bottom: 0.4em;
+}
+
+.policy-highlight p {
+  margin: 0;
+  color: rgba(255, 253, 249, 0.95);
+}
+
+.policy-item {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-cream-dark);
+}
+
+.policy-item h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3em;
+}
+
+/* ---------- Parking ---------- */
+.parking {
+  background: var(--color-white);
+}
+
+.parking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.parking-text p {
+  color: var(--color-walnut-soft);
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(124, 138, 110, 0.12), transparent 60%),
+    var(--color-cream);
+}
+
+.contact-details {
+  display: block;
+  text-align: left;
+  max-width: 420px;
+  margin: 0 auto 2em;
+  padding: 28px 36px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-cream-dark);
+}
+
+.contact-details p {
+  margin: 0.4em 0;
+}
+
+.placeholder {
+  color: var(--color-clay-dark);
+  font-style: italic;
+}
+
+.contact-cta {
+  margin-top: 8px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-walnut);
+  color: var(--color-cream);
+  padding: 32px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.footer-domain {
+  color: rgba(247, 242, 233, 0.6);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+
+  .about-grid,
+  .parking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parking-image { order: -1; }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section { padding: 64px 0; }
+
+  .hero { padding: 90px 0 72px; }
+}
+
+@media (max-width: 480px) {
+  .header-cta { display: none; }
+
+  .contact-details {
+    display: block;
+    padding: 24px;
+  }
+}
