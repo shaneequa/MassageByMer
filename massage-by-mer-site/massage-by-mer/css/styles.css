@@ -1,25 +1,27 @@
 /* ==========================================================================
    Massage by Mer — Stylesheet
-   Palette: earthy, warm, calming. Sage / clay / cream / soft walnut.
+   Palette: Lilac Cloud, Geranium, Riverbed, Undergrowth, Tranquility, Fiddlehead
    ========================================================================== */
 
 :root {
-  --color-cream:        #f7f2e9;
-  --color-cream-dark:   #efe6d6;
-  --color-sage:         #7c8a6e;
-  --color-sage-dark:    #5f6e52;
-  --color-clay:         #c17c56;
-  --color-clay-dark:    #a8603c;
-  --color-walnut:       #4a3c30;
-  --color-walnut-soft:  #6b5c4c;
-  --color-white:        #fffdf9;
+  --color-cream:        #ece8ed; /* Lilac Cloud — page background */
+  --color-cream-dark:   #dcd4df; /* darker Lilac Cloud — borders, dividers */
+  --color-mint:         #ceede7; /* Tranquility — alt section backgrounds */
+  --color-fern:         #a8ce92; /* Fiddlehead — light accent fills */
+  --color-fern-dark:    #8fb47c; /* Fiddlehead, darkened — hover on fern */
+  --color-teal:         #253f3e; /* Riverbed — primary buttons / links / price */
+  --color-teal-dark:    #1b2f2e; /* Riverbed, darkened — hover */
+  --color-forest:       #25332d; /* Undergrowth — secondary dark accent */
+  --color-walnut:       #29242d; /* Geranium — headings, primary text, footer */
+  --color-walnut-soft:  #685d6c; /* Geranium, lightened — body copy */
+  --color-white:        #fffdfb;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --max-width: 1100px;
   --radius: 14px;
-  --shadow-soft: 0 10px 30px rgba(74, 60, 48, 0.08);
+  --shadow-soft: 0 10px 30px rgba(37, 36, 45, 0.1);
 }
 
 /* ---------- Reset & base ---------- */
@@ -73,7 +75,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.14em;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-sage-dark);
+  color: var(--color-teal);
   margin-bottom: 0.6em;
 }
 
@@ -96,30 +98,30 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .btn-primary {
-  background: var(--color-clay);
+  background: var(--color-teal);
   color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background: var(--color-clay-dark);
+  background: var(--color-teal-dark);
   transform: translateY(-1px);
   box-shadow: var(--shadow-soft);
 }
 
 .btn-secondary {
   background: transparent;
-  border-color: var(--color-sage);
-  color: var(--color-sage-dark);
+  border-color: var(--color-teal);
+  color: var(--color-teal);
 }
 
 .btn-secondary:hover {
-  background: var(--color-sage);
+  background: var(--color-teal);
   color: var(--color-white);
 }
 
 /* ---------- Fragrance banner (kept unmissable, above everything) ---------- */
 .fragrance-banner {
-  background: var(--color-clay-dark);
+  background: var(--color-forest);
   color: var(--color-white);
 }
 
@@ -142,7 +144,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 242, 233, 0.92);
+  background: rgba(236, 232, 237, 0.92);
   backdrop-filter: saturate(140%) blur(6px);
   border-bottom: 1px solid var(--color-cream-dark);
 }
@@ -160,7 +162,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-sage-dark);
+  color: var(--color-teal);
   white-space: nowrap;
 }
 
@@ -176,7 +178,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: color 0.15s ease;
 }
 
-.main-nav a:hover { color: var(--color-clay-dark); }
+.main-nav a:hover { color: var(--color-teal); }
 
 .header-cta {
   padding: 10px 22px;
@@ -187,8 +189,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- Hero ---------- */
 .hero {
   background:
-    radial-gradient(circle at 20% 20%, rgba(124, 138, 110, 0.14), transparent 55%),
-    radial-gradient(circle at 85% 75%, rgba(193, 124, 86, 0.14), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(168, 206, 146, 0.22), transparent 55%),
+    radial-gradient(circle at 85% 75%, rgba(206, 237, 231, 0.55), transparent 55%),
     var(--color-cream);
   padding: 120px 0 100px;
   text-align: center;
@@ -218,8 +220,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Image placeholders (swap for real <img> tags later) ---------- */
 .image-placeholder {
-  background: var(--color-cream-dark);
-  border: 1.5px dashed var(--color-sage);
+  background: var(--color-mint);
+  border: 1.5px dashed var(--color-teal);
   border-radius: var(--radius);
   aspect-ratio: 4 / 5;
   display: flex;
@@ -227,7 +229,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
   text-align: center;
   padding: 24px;
-  color: var(--color-sage-dark);
+  color: var(--color-teal);
   font-size: 0.85rem;
   line-height: 1.5;
 }
@@ -269,17 +271,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .service-card.featured {
-  background: var(--color-sage);
-  border-color: var(--color-sage);
+  background: var(--color-fern);
+  border-color: var(--color-fern);
 }
 
 .service-card.featured h3,
 .service-card.featured .price {
-  color: var(--color-white);
+  color: var(--color-walnut);
 }
 
 .service-card.featured p {
-  color: rgba(255, 253, 249, 0.9);
+  color: rgba(41, 36, 45, 0.78);
 }
 
 .service-card.addon {
@@ -300,7 +302,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-clay-dark);
+  color: var(--color-teal);
   white-space: nowrap;
 }
 
@@ -311,8 +313,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ---------- Policies ---------- */
+.policies {
+  background: var(--color-mint);
+}
+
 .policy-highlight {
-  background: var(--color-clay);
+  background: var(--color-forest);
   color: var(--color-white);
   border-radius: var(--radius);
   padding: 32px 36px;
@@ -327,13 +333,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .policy-highlight p {
   margin: 0;
-  color: rgba(255, 253, 249, 0.95);
+  color: rgba(255, 253, 251, 0.95);
 }
 
 .policy-item {
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid var(--color-cream-dark);
+  border-top: 1px solid rgba(37, 63, 62, 0.18);
 }
 
 .policy-item h4 {
@@ -362,7 +368,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- Contact ---------- */
 .contact {
   background:
-    radial-gradient(circle at 50% 0%, rgba(124, 138, 110, 0.12), transparent 60%),
+    radial-gradient(circle at 50% 0%, rgba(168, 206, 146, 0.18), transparent 60%),
     var(--color-cream);
 }
 
@@ -382,7 +388,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .placeholder {
-  color: var(--color-clay-dark);
+  color: var(--color-teal);
   font-style: italic;
 }
 
@@ -407,7 +413,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 .footer-domain {
-  color: rgba(247, 242, 233, 0.6);
+  color: rgba(236, 232, 237, 0.6);
 }
 
 /* ---------- Responsive ---------- */
